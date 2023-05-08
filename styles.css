@@ -1,279 +1,133 @@
-/* -------------------PADRÃO------------------- */
 * {
-    margin:0 ;
-    font-family: 'Source Code Pro', monospace;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scrollbar-color: #282a36;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
 }
+
+*::-webkit-scrollbar {
+  background-color: #222327;
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #454a64;
+  border-radius: 6px;
+}
+
 body {
-    background-color: rgb(16, 16, 16);
-    color: white;
-}
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');
-.hiden {
-    display: none;
+  background-color: #222327;
+  overflow: overlay;
 }
 
-/* -------------------HEADER------------------- */
-
-header{
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 0 auto;
-    max-width: 60vw;
-    border-bottom: 1px solid gray;
-    padding: 3vh;
-}
-header a {
-    font-size: 17px;
+img {
+  position: fixed;
+  display: none;
+  top: 4rem;
+  left: 0rem;
+  width: 10rem;
+  height: auto;
 }
 
-.contact {
-    text-align: center;
-    margin-top: 1vh;    
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
-header .contact a{
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    border-radius: 10px;
 
+header {
+  margin: 3rem 0 6rem 0;
+  text-align: center;
 }
-.contact a:hover {
-    color: rgb(8, 147, 8);
-    background-color: rgba(255, 255, 255, 0.03);
-    transition: 0.4s;
+
+h1 {
+  color: #cdd0e4;
+  text-transform: uppercase;
+  font-size: xx-large;
+  margin-bottom: 2rem;
 }
-.name {
-    justify-self: start;
+
+input {
+  background-color: #454a64;
+  outline: none;
+  border: none;
+  font-size: large;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  color: #b5bad6;
+  width: 20rem;
 }
-.name h1 {
-    margin:auto;
-    color: rgb(0, 229, 0);
-    overflow: hidden;
-    font-size: 40px;
-    position: relative;
+
+input::placeholder {
+  color: #888fb8;
 }
-header .name h1::after {
-    animation: text-reveal 1.5s ease forwards;
-    background-color: black;
-    content: '';
+
+#students-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.student-link {
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+  display: block;
+  width: 9rem;
+  font-size: larger;
+  transition: all 4s 0;
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 0.125rem;
+}
+
+#eminem {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#eminem img {
+  width: 100%;
+  height: 100%;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  #students-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  img {
     display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  }
+
+  #students-list {
+    gap: 3rem;
+  }
 }
 
-@keyframes text-reveal{
-    from {
-        transform: translateX(-101%);
-    }
-    to {
-        transform: translateX(101%);
-    }
-}
-
-/* -------------------BODY------------------- */
-
-.body {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 0 auto;
-    max-width: 60vw;
-    margin-top: 3vh;
-}
-
-/* -------------------GRID------------------- */
-.grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-self: center;
-    text-align: center;
-    background-color: rgb(24, 24, 24);
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 2vh;
-}
-
-.grid img {
-    width: 20vw;
-}
-.title {
-    grid-column-start: 1;
-    grid-column-end: 3; 
-    margin-bottom: 2vh;
-}
-.title h3 {
-    font-size: 25px;
-}
-.img {
-    grid-column-start: 1;
-    grid-column-end: 3; 
-}
-.link {
-    margin-top: 2vh;
-}
-.link a {
-    text-decoration: none;
-    color: white;
-    background-color: rgb(47, 147, 230);
-    padding: 13px;
-    border-radius: 20px;
-}
-.link a:hover {
-    background-color: rgb(41, 129, 201);;
-}
-.info {
-    margin-top: 0.5vh;
-}
-.info button {
-    cursor: pointer;
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 3px solid rgb(214, 214, 214);
-    color: white;
-    font-size: medium;
-}
-.info button:hover {
-    border:3px solid rgb(132, 216, 255);
-}
-#Discord {
-    cursor: pointer;
-}
-
-/* -------------------COPIADO------------------- */
-#alert {
-    justify-self: center;
-    position: fixed;
-    bottom: 10vh;
-    left: 44vw;
-    padding: 10px 40px;
-    z-index: 10;
-    background-color: rgb(41, 41, 41);
-    font-size: large;
-    border-radius: 30px;
-    transition: 1s;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-}
-
-
-/* -------------------INFOS------------------- */
-.infos {
-    display: grid;
-    grid-template-columns: auto auto;
-    z-index: 5;
-    position: fixed;
-    top: auto;
-    left: auto;
-    background-color: rgb(41, 41, 41);
-    justify-self: center;
-    max-width: 60vw;
-    padding: 20px;
-    border-radius: 20px;
-}
-.infos .down {
-    padding: 20px;
-}
-.infos img {
-    width: 10vw;
-}
-.imgInf {
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-.close {
-    grid-column-start: 2;
-    grid-row-start: 1;
-}
-.text {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    margin-left: 2vw;
-}
-.date {
-    margin-top: 1vh;
-}
-.close {
-    justify-self: end;
-}
-.close button {
-    border: none;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0);
-    color: gray;
-    padding: 4px;
-    border-radius: 20px;
-}
-.close button:hover {
-    background-color: rgba(128, 128, 128, 0.199);
-
-}
-
-/* -------------------NICOLAU ANTÔNIO------------------- */
-
-#nicolau {
-    z-index: 20;
-}
-#nicolau img {
-    animation: jump 0.4s;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-@keyframes jump {
-    from {
-        width: 0%;
-        height: 0%;
-    }
-    to {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-@media(max-width: 480px) {
-    /* ------HEADER------ */
-    header {
-        display: block;
-        max-width: 100%;
-    }
-    .name {
-        text-align: center;
-    }
-    .contact {
-        margin-top: 20px;
-    }
-    .contact a {
-        margin-top: 10px;
-    }
-    /* ------GRID------ */
-    .body {
-        display: block;
-        max-width: 80vw;
-    }
-    .img img{
-        width: 60vw;
-        margin-bottom: 10px;
-    }
-    /* ------INFOS------ */
-    .infos {
-        display: block;
-        top: 5vh;
-        left: 15vw;
-        text-align: center;
-    }
-    .imgInf {
-        display: none;
-    }
-    .date {
-        margin-bottom: 5px;
-    }
-    .close {
-        text-align: end;
-    }
+@media (min-width: 1024px) {
+  #students-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
