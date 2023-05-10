@@ -1,5 +1,5 @@
 
-
+// -----------------------COPIAR DISCORD------------------
 function copy(){
     let copy = document.getElementById('alert')
 
@@ -15,6 +15,8 @@ function hide(){
 
     copy.classList.add('hiden')
 }
+
+// -----------------------INDICAÇÔES------------------
 function indicacoes() {
     let indicacoes = document.getElementById('indicacoes')
  
@@ -28,6 +30,33 @@ function close1() {
     indicacoes.classList.add('hiden') 
 }
 
+// -----------------------KAT GENERATOR------------------
+function kat() {
+    let kat = document.getElementById('kat')
+ 
+    kat.classList.remove('hiden')
+    kat.classList.add('infos')
+}
+function close2() {
+    let kat = document.getElementById('kat')
+
+    kat.classList.remove('infos')
+    kat.classList.add('hiden') 
+}
+// -----------------------PP------------------
+function PP() {
+    let PP = document.getElementById('PP')
+ 
+    PP.classList.remove('hiden')
+    PP.classList.add('infos')
+}
+function close3() {
+    let PP = document.getElementById('PP')
+
+    PP.classList.remove('infos')
+    PP.classList.add('hiden') 
+}
+// -----------------------NICOLAU------------------
 let audio = document.getElementById('nico')
 let nicolau = document.getElementById('nicolau')
 
@@ -45,15 +74,3 @@ function stop() {
     audio.pause()
 }
 
-function kat() {
-    let kat = document.getElementById('kat')
- 
-    kat.classList.remove('hiden')
-    kat.classList.add('infos')
-}
-function close2() {
-    let kat = document.getElementById('kat')
-
-    kat.classList.remove('infos')
-    kat.classList.add('hiden') 
-}
