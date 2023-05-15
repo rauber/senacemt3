@@ -6,7 +6,7 @@ const students = [
   { name: "Brian", url: "/brian" },
   { name: "Bruno", url: "/bruno" },
   { name: "Davi F.", url: "/froemming" },
-  { name: "Davi M.", url: "/mohr" },
+  { name: "Davi M.", url: "/davimohr" },
   { name: "Davi B.", url: "/borba" },
   { name: "Eduarda", url: "/eduarda" },
   { name: "Eduardo", url: "/eduardo" },
