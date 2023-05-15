@@ -7,6 +7,14 @@ const activitiesStorage = [
         url: 'indicacoes',
         instructions: 'Criar um website sobre conteúdos relacionados a front-end, contendo: site de conteúdos, canal do Youtube, influenciador, tutorial e podcast'
     },
+    {
+        name: 'Projeto de Pesquisa',
+        subject: 'Projeto Profissional',
+        image: 'projeto.svg',
+        date: new Date(2023, 5, 15),
+        url: 'projeto',
+        instructions: 'Criar um website para mostrar as diferentes seções da pesquisa.'
+    }
 ]
 
 const activitiesElement = document.getElementById('activities')
