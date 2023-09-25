@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../tecnico + PP ODS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ODS"
+	}
+}
